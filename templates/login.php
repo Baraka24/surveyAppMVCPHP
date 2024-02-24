@@ -2,7 +2,7 @@
 
 <?php ob_start(); ?>
 <div class="container mt-3">
-  <h2>Stacked form</h2>
+  <h2>Login in</h2>
   <form action="/action_page.php">
     <div class="mb-3 mt-3">
       <label for="email">Email:</label>
