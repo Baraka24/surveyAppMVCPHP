@@ -48,9 +48,10 @@
             <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
           </div>
           <div class="mb-3">
-            <label for="Cpwd">Confirm Password:</label>
-            <input type="password" class="form-control" id="Cpwd" placeholder="Enter confirm password" name="cpswd">
+            <label for="cpwd">Confirm Password:</label>
+            <input type="password" class="form-control" id="cpwd" placeholder="Enter confirm password" name="cpswd">
           </div>
+          <div class="registrationFormAlert text-success" id="CheckPasswordMatch"></div>
           <div class="mb-3">
             <label for="comment">Other infos:</label>
             <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
@@ -69,6 +70,20 @@
 </div>
 
 </div>
+<!-- <script>
+  function checkPasswordMatch() {
+    var password = $("#pwd").val();
+    var confirmPassword = $("#cpwd").val();
+    if (password != confirmPassword)
+        $("#CheckPasswordMatch").html("Passwords does not match!");
+    else
+        $("#CheckPasswordMatch").html("Passwords match.");
+}
+$(document).ready(function () {
+   $("#cpwd").keyup(checkPasswordMatch);
+});
+
+</script> -->
 <?php $content = ob_get_clean(); ?>
 
 <?php require('layout.php') ?>
