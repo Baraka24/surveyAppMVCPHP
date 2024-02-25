@@ -1,12 +1,15 @@
 
-function checkPasswordMatch() {
-    var password = $("#pwd").val();
-    var confirmPassword = $("#cpwd").val();
-    if (password != confirmPassword)
-        $("#CheckPasswordMatch").html("Passwords does not match!");
-    else
-        $("#CheckPasswordMatch").html("Passwords match.");
-}
-$(document).ready(function () {
-   $("#cpwd").keyup(checkPasswordMatch);
+$(() => {
+    $('#password, #re-password').on('keyup', function () {
+        if ($('#password').val() == "" && $('#re-password').val() == "") {
+            $('#submit-pass').prop('disabled', true);
+            $('#message').hide();
+        } else if ($('#password').val() == $('#re-password').val()) {
+            $('#submit-pass').prop('disabled', false);
+            $('#message').show().html('Password Match').css('color', 'green');
+        } else {
+            $('#submit-pass').prop('disabled', true);
+            $('#message').show().html('Password do not match').css('color', 'red');
+        }
+    });
 });

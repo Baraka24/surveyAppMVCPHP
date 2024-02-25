@@ -44,19 +44,19 @@
             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
           </div>
           <div class="mb-3">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" name="pswd">
           </div>
           <div class="mb-3">
-            <label for="cpwd">Confirm Password:</label>
-            <input type="password" class="form-control" id="cpwd" placeholder="Enter confirm password" name="cpswd">
+            <label for="re-password">Confirm Password:</label>
+            <input type="password" class="form-control" id="re-password" placeholder="Enter confirm password" name="cpswd">
+            <p class="text-success" id="message"></p>
           </div>
-          <div class="registrationFormAlert text-success" id="CheckPasswordMatch"></div>
           <div class="mb-3">
             <label for="comment">Other infos:</label>
             <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Create</button>
+          <button type="submit" id="submit-pass" class="btn btn-primary">Create</button>
         </form>
       </div>
 

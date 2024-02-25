@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confirm Password</title>
+
+	<style type="text/css">
+		.wrapper {
+			height: 130px;
+			width: 250px;
+			background: #f8f8f8;
+			padding: 10px;
+		}
+
+		.field {
+			margin: 4px;
+		}
+	</style>
+
+	<!-- import jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- check password confirmation -->
+	<script>
+		$(() => {
+			$('#password, #re-password').on('keyup', function () {
+				if ($('#password').val() == "" && $('#re-password').val() == "") {
+					$('#submit-pass').prop('disabled', true);
+					$('#message').hide();
+				} else if ($('#password').val() == $('#re-password').val()) {
+					$('#submit-pass').prop('disabled', false);
+					$('#message').show().html('Password Match').css('color', 'green');
+				} else {
+					$('#submit-pass').prop('disabled', true);
+					$('#message').show().html('Password do not match').css('color', 'red');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="field">
+			<input type="password" id="password">
+		</div>
+		<div class="field">
+			<input type="password" id="re-password">
+		</div>
+		<div class="field">
+			<span id="message"></span>
+		</div>
+		<div class="field">
+			<button type="submit" id="submit-pass">submit</button>
+		</div>
+	</div>
+
+</body>
+</html>
