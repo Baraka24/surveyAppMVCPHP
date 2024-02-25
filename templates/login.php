@@ -50,7 +50,7 @@
           <div class="mb-3">
             <label for="re-password">Confirm Password:</label>
             <input type="password" class="form-control" id="re-password" placeholder="Enter confirm password" name="cpswd">
-            <p class="text-success" id="message"></p>
+            <p class="" id="message"></p>
           </div>
           <div class="mb-3">
             <label for="comment">Other infos:</label>
