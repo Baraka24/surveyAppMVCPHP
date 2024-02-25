@@ -46,10 +46,14 @@
           <div class="mb-3">
             <label for="password">Password:</label>
             <input type="password" class="form-control" id="password" placeholder="Enter password" name="pswd">
+            <input type="checkbox" class="show-password" id="show-password-1">
+            <label for="show-password-1">Show Password</label>
           </div>
           <div class="mb-3">
             <label for="re-password">Confirm Password:</label>
             <input type="password" class="form-control" id="re-password" placeholder="Enter confirm password" name="cpswd">
+            <input type="checkbox" class="show-password" id="show-password-2">
+            <label for="show-password-2">Show Password</label>
             <p class="" id="message"></p>
           </div>
           <div class="mb-3">
@@ -70,20 +74,6 @@
 </div>
 
 </div>
-<!-- <script>
-  function checkPasswordMatch() {
-    var password = $("#pwd").val();
-    var confirmPassword = $("#cpwd").val();
-    if (password != confirmPassword)
-        $("#CheckPasswordMatch").html("Passwords does not match!");
-    else
-        $("#CheckPasswordMatch").html("Passwords match.");
-}
-$(document).ready(function () {
-   $("#cpwd").keyup(checkPasswordMatch);
-});
-
-</script> -->
 <?php $content = ob_get_clean(); ?>
 
 <?php require('layout.php') ?>
