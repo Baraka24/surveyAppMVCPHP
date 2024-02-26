@@ -34,31 +34,31 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        <form action="/action_page.php">
+        <form action="index.php?action=createAccount" method="post">
           <div class="mb-3 mt-3">
             <label for="name">Name(s):</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter name(s)" name="name">
+            <input type="text" class="form-control" id="name" placeholder="Enter name(s)" name="name" required>
           </div>
           <div class="mb-3 mt-3">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
           </div>
           <div class="mb-3">
             <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter password" name="pswd">
+            <input type="password" class="form-control" id="password" placeholder="Enter password" name="pswd" required>
             <input type="checkbox" class="show-password" id="show-password-1">
             <label for="show-password-1">Show Password</label>
           </div>
           <div class="mb-3">
             <label for="re-password">Confirm Password:</label>
-            <input type="password" class="form-control" id="re-password" placeholder="Enter confirm password" name="cpswd">
+            <input type="password" class="form-control" id="re-password" placeholder="Enter confirm password" name="cpswd" required>
             <input type="checkbox" class="show-password" id="show-password-2">
             <label for="show-password-2">Show Password</label>
             <p class="" id="message"></p>
           </div>
           <div class="mb-3">
             <label for="comment">Other infos:</label>
-            <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
+            <textarea class="form-control" rows="3" id="comment" name="otherInfo"></textarea>
           </div>
           <button type="submit" id="submit-pass" class="btn btn-primary">Create</button>
         </form>
