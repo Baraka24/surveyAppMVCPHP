@@ -3,6 +3,18 @@
 <?php ob_start(); ?>
 <div class="container mt-3">
   <h2>Login in</h2>
+
+  <?php
+    if (isset($_GET['success'])) {
+      ?>
+        <div class="alert alert-success alert-dismissible">
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <strong>Success!</strong> <?= $_GET['success'] ?>
+        </div>
+      <?php
+    }
+  ?>
+
   <form action="/action_page.php">
     <div class="mb-3 mt-3">
       <label for="email">Email:</label>

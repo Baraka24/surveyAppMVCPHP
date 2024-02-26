@@ -1,5 +1,6 @@
 <?php
 //index.php
+session_start();
 
 require_once('src/controllers/login.php');
 require_once('src/controllers/sign_up.php');

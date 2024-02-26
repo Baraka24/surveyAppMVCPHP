@@ -15,7 +15,7 @@ function addAccount(array $input)
     if (!$success) {
         throw new Exception('Impossible to create an account!');
     } else {
-        header('Location: index.php');
+        header('Location: index.php?success=Account created successfuly, You can log in now...');
     }
 
 }
